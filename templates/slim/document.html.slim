@@ -89,8 +89,14 @@ html lang=(attr :lang, 'en' unless attr? :nolang)
               span.author #{attr :author}#{(attr :corpname) && " - #{attr :corpname}"}
               - if attr? :email
                 '
-                span.email =sub_macros(attr :email)
+                span.email =sub_macros(attr :email)                
         =content
+      footer
+        span.author #{attr :author}#{(attr :corpname) && " - #{attr :corpname}"}
+        - if attr? :email
+          '
+          span.email =sub_macros(attr :email)                
+
     script src="#{revealjsdir}/lib/js/head.min.js"
     script src="#{revealjsdir}/js/reveal.js"
     javascript:
