@@ -175,7 +175,8 @@ html lang=(attr :lang, 'en' unless attr? :nolang)
             { src: '#{revealjsdir}/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
             #{(attr? 'source-highlighter', 'highlightjs') ? "{ src: '#{revealjsdir}/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }," : nil}
             { src: '#{revealjsdir}/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-            { src: '#{revealjsdir}/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+            { src: '#{revealjsdir}/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+            { src: '#{revealjsdir}/plugin/menu/menu.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
       });
     - unless (docinfo_content = (docinfo :footer, '.html')).empty?
